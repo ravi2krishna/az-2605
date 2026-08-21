@@ -1,0 +1,103 @@
+Class - 1
+===========
+
+    -> Azure Cloud 
+
+        -> Cloud Computing (Infrastructure) 
+
+            -> Training Institute (Infrastructure)
+
+                -> Tables, Chairs, TV's, Projectors etc 
+
+            -> In the world of IT, for running Applications We need (IT Infrastructure)
+
+                -> Any Application Has "Data" i.s Text, Images, Videos etc 
+
+                    -> Where is this Data coming from ?? 
+
+                        -> From Database ?? 
+
+                    -> Where is this Database coming from ?? 
+
+                        -> From Server (Hardware - CPU / RAM / HDD / NW)
+
+                    -> Where is this Server coming from ?? 
+
+                        -> Datacenters 
+
+        -> NOTE: Application -> Data -> Database -> Server -> Datacenter
+
+    
+    -> Datacenter 
+
+        -> A data center is a physical facility or building that houses 
+        groups of networked computer servers, data storage drives, and network equipment 
+        used by companies to store, process, and share digital information and run applications.
+                    
+        -> https://datacenters.microsoft.com/wp-content/uploads/2025/11/OMB-Datacenter-11_11-Hero.jpg
+
+        
+        -> Main Parts Of Datacenter
+
+            -> Servers: 
+                
+                -> High-power computers that process data and run software programs.
+
+            -> Storage Systems: 
+            
+                -> Hard drives and arrays that hold large amounts of digital files and records.
+
+            -> Network Gear: 
+            
+                -> Routers, switches, and firewalls that move data safely in and out of the facility.
+
+            -> Cooling and Power: 
+            
+                -> Heavy-duty air conditioners, fans, backup generators, and power grids to 
+                keep machines running non-stop.
+
+    
+    -> Setting Up Datacenter 
+
+        -> We need to Buy / Lease Land 
+
+        -> Construct / Rent a building 
+
+        -> Need to hire security to manage building and components inside the building 
+
+        -> Need to buy Computer Components Like Servers, Storage, Network, AC's etc 
+
+        -> Once Components arrive, we need to hire people(Human Resources) to manage
+        Servers, Storage, Network, AC's then Server Admins, Storage Admins, 
+        Network Admins, Electricians etc 
+
+        -> NOTE: To Setup and Manage Datacenters, we need a lot of Expenditure(Money) and 
+        lot of Human Resources To manage a datacenter, this leads to 
+        lot of money, lot of effort and lot of time. 
+
+    
+        -> NOTE: The person who wants to setup flipkart like application is a developer 
+        with few people(5) to build this as a prototype 
+
+    
+    
+    -> Cloud Computing (Cloud Datacenters)
+
+        -> Google / Amazon / Microsoft / Oracle (Already Established companies in IT For Long Time)
+
+            -> They Already have Infrastructure with them (Servers, Storage, Network, AC's etc)
+
+        -> In 2006 Amazon Started Renting Out Unused Infrastructure 
+
+            -> I have 5 Bikes, if i'm not using all these bikes, say i'm using 2 bikes only
+            then 3 bikes are sitting idle, why shouldn't i start renting them ??? 
+
+                -> 1 hour - ₹ 
+                -> 5 hours - ₹₹₹ 
+                -> 10 hours - ₹₹₹₹₹    
+                -> 24 hours - ₹₹₹₹₹₹₹
+
+        -> The Cloud referred as Cloud Computing is the "ON-DEMAND" Availability Of 
+        Compute Power, Storage, Network, Applications and Other IT Resources 
+        through Cloud Platforms / Cloud Vendors(AZURE/AWS/GCP etc) via INTERNET
+        with PAY AS YOU GO PRICING 
