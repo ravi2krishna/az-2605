@@ -101,3 +101,93 @@ Class - 1
         Compute Power, Storage, Network, Applications and Other IT Resources 
         through Cloud Platforms / Cloud Vendors(AZURE/AWS/GCP etc) via INTERNET
         with PAY AS YOU GO PRICING 
+
+
+Class - 2
+===========
+
+    -> Cloud Offerings 
+
+        -> Cloud Offerings Provide On-Demand Access to 
+        Computing, Storage, Network and Softwares Resources Over the Internet. 
+
+            -> IAAS - Infrastructure As A Service 
+
+            -> PAAS - Platform As A Service 
+
+            -> SAAS - Software As A Service 
+
+        -> NOTE: This is Similar to Online Ride Offerings (Rapido)
+        Scooty, Bike, Auto, Hatchback Car, Sedan Car, SUV Car 
+
+            -> As a customer i want car then car offering is available 
+
+            -> As a customer i want truck, then truck offering is not available 
+
+
+        -> IAAS - Infrastructure As A Service 
+
+            -> IAAS Model Provides Raw Computing Infrastructure Like Servers, Storage, Network
+
+            -> You Manage Underlying Components On Top Of Infrastructure 
+
+            -> https://miro.medium.com/v2/resize:fit:1400/1*VIzchB0D3t1awTzj3sfe1g.png
+
+            -> Server For Myntra Application
+
+                -> Hardware & Virtualization Will Be Provided & Managed By Vendor 
+
+                    -> 4 CPU's - 16 GB RAM - 500 GB HDD - Networking 
+
+                -> As a customer You Need To Manage 
+
+                    -> Setup Linux Operating System (Ubuntu)
+
+                    -> Setup Middleware - Web logic / Jboss / Tomcat 
+
+                    -> Setup Runtime - Java / Python / C# 
+
+                    -> Setup Data - Code / Database Tables 
+
+                    -> Setup Myntra Application & Run 
+
+                -> We Need More Human Resources
+
+                -> Cost is Less: ₹₹
+        
+        
+        -> PAAS - Platform As A Service 
+
+            -> PAAS Model Delivers Frameworks For "Developers" 
+            to Build, Test and Deploy Softwares / Applications 
+            Without Managing Underlying Hardware, Middleware and Runtime.
+
+            -> Server For Myntra Application With Linux OS, Tomcat Server and 
+            Java Runtime is given from vendor only. 
+
+            -> Hardware, Virtualization and Platform for your Applications
+            will be provided and managed by vendors. 
+
+                -> 4 CPU's - 16 GB RAM - 500 GB HDD - Networking - Linux Ubuntu OS - Tomcat Installed - Java Installed
+
+            -> As a customer You Need To Manage 
+
+                -> Data and Application Only 
+
+            -> We Need Less Human Resources
+
+                -> Cost is More: ₹₹₹₹ 
+
+            -> NOTE: We may use standalone Service i.e Only IAAS or Combine IAAS + PAAS 
+
+            -> Myntra Application Requires (Developers Perspective)
+
+                -> Web Server it's easy to manage - IAAS 
+
+                -> Database Server it's bit difficult to manage - so i will choose PAAS 
+
+                -> Solution 1 : Web Server (IAAS) + Database Server (IAAS) - ₹₹
+
+                -> Solution 2 : Web Server (IAAS) + Database Server (PAAS) - ₹₹₹₹ 
+
+                -> Solution 3 : Web Server (PAAS) + Database Server (PAAS) - ₹₹₹₹₹₹₹₹₹₹
