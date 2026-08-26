@@ -191,3 +191,169 @@ Class - 2
                 -> Solution 2 : Web Server (IAAS) + Database Server (PAAS) - ₹₹₹₹ 
 
                 -> Solution 3 : Web Server (PAAS) + Database Server (PAAS) - ₹₹₹₹₹₹₹₹₹₹
+
+
+Class - 3
+===========
+
+    -> SAAS - Software As A Service 
+
+        -> SAAS Model Provides Fully Functional and Ready To Use Softwares / Applications 
+
+        -> Generally Accessed Via Web Browsers 
+
+        -> Examples: Salesforce - Microsoft 365 - Google Workspace 
+
+        -> Server For Myntra Application With Linux OS, Tomcat Server, 
+        Java Runtime, Database Tables & Code is given from vendor only. 
+
+        -> Hardware, Virtualization, Platform and Applications
+        will be provided and managed by vendors. 
+
+            -> 4 CPU's - 16 GB RAM - 500 GB HDD - Networking - Linux Ubuntu OS - Tomcat Installed - Java Installed -> Data & Application
+
+        -> As a customer You Need To Manage 
+
+            -> NOTHING 
+
+    
+    -> Infrastructure
+
+        -> Say we have an ecommerce application (https://www.myntra.com/)
+        which requires Infrastructure to be setup 
+
+            -> Servers 
+
+            -> Storage 
+
+            -> Networking 
+
+            -> Database 
+
+            -> Security 
+
+            -> etc 
+
+        -> NOTE: Above Components are Not Applications, but these are required for 
+        setting up Applications.
+
+            -> Servers 
+                +
+            -> Storage 
+                +
+            -> Networking           --->    My Ecommerce Application (https://www.myntra.com/)
+                +
+            -> Database 
+                +
+            -> Security 
+                +
+            -> etc 
+
+        -> NOTE: Combination Of Above Components is my Application
+
+
+        -> Now We Want To Setup Myntra Application On Cloud (AZURE)
+        i.e We Need Infrastructure From Azure 
+
+            -> Servers          -       Azure Virtual Machines              
+
+            -> Storage          -       Azure Storage Accounts 
+
+            -> Networking       -       Azure Virtual Networks 
+
+            -> Database         -       Azure SQL 
+
+            -> Security         -       Azure Entra ID 
+
+            -> etc              -       Azure etc 
+
+        
+        -> NOTE: Above Cloud Services are Not Applications, but these are required for 
+        setting up Applications.
+
+            -> Azure Virtual Machines               
+                +
+            -> Azure Storage Accounts  
+                +
+            -> Azure Virtual Networks    --->    My Ecommerce Application (https://www.myntra.com/)
+                +
+            -> Azure SQL  
+                +
+            -> Azure Entra ID  
+                +
+            -> etc 
+
+        -> NOTE: Combination Of Above Cloud Services is my Application
+
+        -> NOTE: Real World Application Using Azure Cloud Infrastructure
+        https://drive.google.com/file/d/1zN3FGpEyl5X2PySiSuyWaJnqHInLHIC9/view?usp=sharing
+
+
+        -> GOAL 1: To Learn About Individual Services i.e 
+        Azure Virtual Machines, Azure Virtual Networks, Azure SQL etc 
+
+        -> GOAL 2: Combining Multiple Services To Build Solution(Application)
+        Azure Virtual Machines + Azure Virtual Networks + Azure SQL == My Application On Cloud 
+
+        -> GOAL 3: Once Application is powered by Azure Services, Application
+        Should have following Characteristics (4 Pillars Of Cloud)
+
+            -> High Availability 
+
+            -> Fault Tolerance 
+
+            -> Scalability 
+
+            -> Security 
+
+    
+    -> Cloud Terminology 
+
+        -> High Availability 
+
+            -> High Availability in Azure ensures your applications are continuously 
+            accessible and operational (24 X 7)
+
+            -> https://drive.google.com/file/d/16O-aDK-g_CCJpWoyvho79f_H2SUplCT2/view - No High Availability
+
+            -> https://gmail.com - Highly Available 
+
+
+        -> Fault Tolerance 
+
+            -> Fault Tolerance in Azure refers to the ability of a system to continue 
+            operating without interruption in the event of hardware failures 
+
+            -> Fault Tolerance is associated with Self Healing 
+
+            -> NOTE: Just like a power generator, will be active when we lose power in building 
+
+                -> A building without power generator is not Fault Tolerant 
+
+                -> A building with power generator is Fault Tolerant 
+
+                -> NOTE: A Fault Tolerant System is indirectly an Highly Available System 
+
+
+        -> Scalability 
+
+            -> Scalability in Azure refers to the ability of a system to handle 
+            increasing workloads and accommodate according to growing demands.
+
+            -> https://steadybit.com/wp-content/uploads/2025/09/validate-aws-ecs-auto-scaling-comp.png
+
+                -> Increasing Hardware Resources - Scale Up 
+
+                -> Decreasing Hardware Resources - Scale Down 
+
+                -> Horizontal Scaling vs Vertical Scaling
+
+        
+        -> Security 
+
+            -> Security in Azure refers to the measures taken to protect cloud resources
+            and applications from Unauthorized Access.
+
+                -> Account Level Security 
+
+                -> Application Level Security 
