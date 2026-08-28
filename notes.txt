@@ -357,3 +357,43 @@ Class - 3
                 -> Account Level Security 
 
                 -> Application Level Security 
+
+
+Class - 4
+===========
+
+    -> Setup Free Azure Accounts 
+
+        -> Valid For 1 Month 
+
+        -> Get USD 200 credit
+
+        -> You Need To Provide Following Unique Details 
+
+            -> Email 
+
+            -> Phone Number 
+
+            -> Credit / Debit Card (Charges 2 INR)
+
+    
+    -> Azure Global Infrastructure 
+
+        -> Azure global infrastructure refers to Microsoft's extensive 
+        network of data centers and region-based services around the world, 
+        designed to deliver reliable, scalable, and secure cloud computing. 
+        This infrastructure is built to support a wide range of cloud services, 
+        including computing, storage, networking, and analytics, 
+        with a focus on global reach and compliance.
+
+        -> NOTE: As Of 2026, Azure Has 
+        
+            -> 80+ regions | 500+ datacenters
+
+        -> https://datacenters.microsoft.com/globe/explore/
+
+        -> NOTE: Azure Infrastructure Is Mainly Made Of 
+
+            -> Regions: Geographic Locations Which Have Multiple Availability Zones 
+
+            -> Availability Zones: Physical Data Centers (Buildings) 
