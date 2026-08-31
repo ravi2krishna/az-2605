@@ -397,3 +397,157 @@ Class - 4
             -> Regions: Geographic Locations Which Have Multiple Availability Zones 
 
             -> Availability Zones: Physical Data Centers (Buildings) 
+
+
+Class - 5
+===========
+
+    -> Azure Azure Virtual Networks (Vnet) Service 
+
+        -> A Virtual Network (VNET) in Azure is a foundational service that 
+        enables you to build your own private network in the Azure cloud. 
+
+        -> VNET Lets you launch AZURE resources (servers, databases, applications etc) 
+        in a logically isolated virtual network that you define.
+
+        -> NOTE: Having VNET is similar to having your own data center inside AZURE.
+
+        -> https://www.akamai.com/site/en/images/article/2023/akamai-public-private-cloud.png
+
+    
+    -> Azure Subnet 
+
+        -> A subnet is a range of IP addresses in the virtual network. 
+        You can divide a virtual network into multiple subnets 
+        for better organization and security. 
+
+        -> Multiple Classes - Multiple Students - Institute 
+
+            -> All Students Of Institute 
+
+                -> Divide them on bases of courses 
+
+                    -> aws      -   100
+
+                    -> azure    -   100
+
+                    -> devops   -   250
+
+                    -> python   -   500 
+
+            
+            -> All Servers Of Company 
+
+                -> HR 
+
+                -> Finance 
+
+                -> Marketing 
+
+                -> IT - Web 
+
+                -> IT - App
+
+                -> IT - DB 
+
+        -> Subnetting is the practice of dividing a network into 
+        two or more smaller networks 
+
+            -> https://media.licdn.com/dms/image/v2/D4E12AQHPtem2f85BeA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1735425019181?e=2147483647&v=beta&t=j559FKZWmijUwiQOWNJj9fJVhfyq-IEK0mhouLV4B8Q
+            
+            -> Subnet Calculations
+
+                -> https://mattrickard.com/static/image/how-to-calculate-a-cidr/1.webp
+        
+                -> How To Calculate Subnet Size 
+
+                    Total NW Bits are 32 
+                    Result = Total NW Bits - Your Size 
+                    No Of Devices / IP Addresses - 2 ^ Result 
+
+                    16 = 65536
+
+                    16 - Result = 32 - 16 i.e 16 - No Of Devices / IP Addresses - 2 ^ 16 = 65536 
+                    20 - Result = 32 - 20 i.e 12 - No Of Devices / IP Addresses - 2 ^ 12 = 4096
+                    22 - Result = 32 - 22 i.e 10 - No Of Devices / IP Addresses - 2 ^ 10 = 1024 
+                    24 - Result = 32 - 24 i.e 8  - No Of Devices / IP Addresses - 2 ^ 8 = 256 
+
+
+    -> Azure Network Reserved IP's 
+
+        -> Azure reserves the first four and last IP addresses for a total of 
+        5 IP addresses within each subnet.
+
+            -> Assume Our Subnet is 10.0.0.0/24 i.e 256 Devices / IP Address 
+
+                10.0.0.0 - Reserved For Network Address 
+                10.0.0.1 - Reserved For Default Gateway 
+                10.0.0.2 - Reserved For DNS 
+                10.0.0.3 - Reserved For DNS 
+                10.0.0.4 - You Can Use 
+                10.0.0.5 - You Can Use 
+                10.0.0.6 - You Can Use 
+                .
+                .        - You Can Use 
+                10.0.0.254 - You Can Use 
+                10.0.0.255 - Reserved For Broadcast Address  
+                10.0.1.0
+                10.0.1.1
+                10.0.1.2
+                .
+                .
+                10.0.1.255
+                .
+                .
+                .
+
+    -> Requirement is like We Need Servers Isolated according to 
+
+        -> Assume VNET size is /16 (Generally we use this)
+
+            - /16 size means 65536 (data center size)
+
+            - Network Address - 10.0.0.0
+
+            - VNET is 10.0.0.0/16 - 65536 Devices / IP Addresses 
+
+        -> Web, App and Databases Subnets 
+
+            -> In Web Subnet they need around 4000 Servers 
+
+                - subnet size is /20
+
+                - 10.0.0.0/20 
+
+                10.0.0.0
+                10.0.0.1
+                .
+                .
+                10.0.15.255 
+
+                - Range i.e Start To End 
+
+            -> In App Subnet they need around 2000 Servers 
+                
+                - subnet size is /21 
+
+                - 10.0.16.0/21
+
+                10.0.16.0
+                10.0.16.1
+                .
+                .
+                10.0.23.255
+
+            -> In Database Subnet they need around 1000 Servers 
+
+                - subnet size is /22 
+
+                - 10.0.24.0/22
+
+                10.0.24.0
+                10.0.24.1
+                .
+                .
+                10.0.27.255
+
