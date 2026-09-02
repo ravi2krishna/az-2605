@@ -551,3 +551,90 @@ Class - 5
                 .
                 10.0.27.255
 
+
+Class - 6
+===========
+
+    -> Network Security Group - NSG (Firewalls)
+
+        -> Azure network security group is used to filter network traffic to and from 
+        Azure resources in an Azure virtual network.
+
+        -> A network security group contains security rules that allow or deny 
+        inbound network traffic.
+
+        -> For each rule, you can specify source and destination, port, and protocol.
+
+            -> Myntra Web NSG 
+
+                -> SSH Access (Admin Access For Linux Server) - Port 22 
+                -> RDP Access (Admin Access For Windows Server) - Port 3389 
+                -> HTTP Access (For Web Applications) - Port 80 
+
+    -> Azure Public IP's 
+
+        -> Public IP addresses allow Internet resources to communicate inbound to 
+        Azure resources. Public IP addresses enable Azure resources to communicate to 
+        Internet and public-facing Azure services.
+
+        -> Myntra Web Server Needs Public IP To communicate from Internet 
+
+        -> Myntra Database Server Doesn't Need Public IP, as Databases don't communicate 
+        with internet directly. 
+
+    
+    -> Azure Network Interface Card - Azure NIC 
+
+        -> In Azure, a Network Interface (NIC) is a crucial resource that connects a 
+        Virtual Machine (VM) to a Virtual Network (VNet). 
+
+        -> Each NIC acts as a virtual network adapter, allowing for IP configurations 
+        (private/public, static/dynamic), association with Network Security Groups (NSGs) 
+        for traffic filtering. 
+
+
+    -> Most Popular Applications
+        
+        -> https://en.wikipedia.org/wiki/Programming_languages_used_in_most_popular_websites
+
+
+    -> Requirement Given by XYZ Organization
+
+        -> XYZ Organization is going to setup the HRMS Application
+        and they need servers / infrastructure and their customers 
+        are coming from some US Location 
+
+            -> As Per Above Requirement, will select US Based Regions 
+
+        -> They are gonna host Servers
+
+        -> These servers are grouped into three subnets 
+
+            -> First Subnet is for web servers, around 4k Servers 
+
+            -> Second Subnet is for app servers, around 2k Servers 
+
+            -> Third Subnet is for database servers, around 1k Servers
+
+            -> In the future, they might add more number of subnets 
+            i.e cache subnets, load balancer subnet, HR Subnet, Finance Subnet etc
+
+            -> The Web Servers and App Servers needs to be communicated from internet (WWW)
+
+            -> The Database servers needs to be communicated only from App Servers, 
+            but not from internet (WWW)
+
+            -> Coming to security of Web Servers, they should have only 
+                -> SSH traffic enabled for administration from internet
+                -> HTTP traffic for clients from internet
+                -> HTTPS traffic for clients from internet
+
+            -> Coming to security of App Servers, they should have only 
+                -> SSH traffic enabled for administration from internet using port 50222
+                -> HTTP traffic for clients from internet using port 8080 
+
+            -> Coming to security of Database Servers, they should have only 
+                -> SSH traffic enabled for administration from Web Servers Only 
+                -> Postgres Database traffic enabled for transactions from App Servers Only 
+                
+
