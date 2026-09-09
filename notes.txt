@@ -691,3 +691,137 @@ Class - 7
             -> NOTE: Don't Attach / Create Any Public IP For Database NIC 
 
         -> NOTE: To Test The VNET Created, We Need Server i.e Virtual Machines 
+
+
+Class - 8
+===========
+
+    -> NOTE: To Test The VNET Created, We Need Server i.e Virtual Machines 
+
+
+Class - 9
+===========
+
+    -> Requirement Given by XYZ Organization
+
+        -> XYZ Organization is going to setup the HRMS Application
+        and they need servers / infrastructure and their customers 
+        are coming from some US Location 
+
+            -> As Per Above Requirement, will select US Based Regions 
+
+        -> They are gonna host Servers
+
+        -> These servers are grouped into three subnets 
+
+            -> First Subnet is for web servers, around 4k Servers 
+
+            -> Second Subnet is for app servers, around 2k Servers 
+
+            -> Third Subnet is for database servers, around 1k Servers
+
+            -> In the future, they might add more number of subnets 
+            i.e cache subnets, load balancer subnet, HR Subnet, Finance Subnet etc
+
+            -> The Web Servers and App Servers needs to be communicated from internet (WWW)
+
+            -> The Database servers needs to be communicated only from App Servers, 
+            but not from internet (WWW)
+
+            -> Coming to security of Web Servers, they should have only 
+                -> SSH traffic enabled for administration from internet
+                -> HTTP traffic for clients from internet
+                -> HTTPS traffic for clients from internet
+
+            -> Coming to security of App Servers, they should have only 
+                -> SSH traffic enabled for administration from internet using port 50222
+                -> HTTP traffic for clients from internet using port 8080 
+
+            -> Coming to security of Database Servers, they should have only 
+                -> SSH traffic enabled for administration from Web Servers Only 
+                -> Postgres Database traffic enabled for transactions from App Servers Only 
+
+        -> NOTE: To Fulfill this Requirement We Have Taken around 1 Hour 
+
+    
+    -> Now We Have New Requirement From Another Customer To Create VNET For LMS Application
+
+        -> "Earlier" We Created HRMS VNET Using Geographical User Interface (GUI) (Beginners)
+
+            -> 1 Hour To Complete
+
+        -> "Now" We Need To Create LMS VNET Using Geographical User Interface (GUI) (Beginners)
+
+            -> 1 Hour To Complete 
+
+        -> "Next" We Need To Create CRM VNET Using Geographical User Interface (GUI) (Beginners)
+
+            -> 1 Hour To Complete 
+
+        -> NOTE: Total Work Time Is 3 Hours Using Geographical User Interface (GUI) (Beginners) 
+
+        -> NOTE: Now We Want Efficiency in terms of Work.
+
+    
+    -> We Can Also Setup Infrastructure On Cloud Using Command Line Interface (CLI) (Intermediate)
+
+        -> "Earlier" We Created HRMS VNET Using Command Line Interface (CLI) (Intermediate)
+
+            -> First Time As You Are Learning - 1 Hour To Complete 
+
+        -> "Now" We Need To Create LMS VNET Using Command Line Interface (CLI) (Intermediate)
+
+            -> Second Time -  15 Mins To Complete 
+
+        -> "Next" We Need To Create CRM VNET Using Command Line Interface (CLI) (Intermediate)
+
+            -> Third Time -  15 Mins To Complete 
+
+        -> NOTE: Total Work Time Is 1.5 Hours Using Command Line Interface (CLI) (Intermediate)
+
+    
+    -> To Work In Command Line Interface (CLI) (Intermediate)
+    Azure Has Provided a Tool Called "Azure CLI"
+
+
+    -> Azure CLI
+
+        -> The Azure Command-Line Interface (CLI) is a cross-platform command-line tool 
+        used to create, manage, and automate Azure cloud resources. 
+        Unlike the graphical Azure Portal, the CLI allows you to execute operations 
+        quickly via interactive terminal prompts or reusable shell scripts.
+
+        -> To Download Azure CLI, Visit Below URL
+        https://learn.microsoft.com/en-us/cli/azure/?view=azure-cli-latest
+
+        -> Install Azure CLI On Linux 
+
+            -> curl -fsSL 'https://azurecliprod.blob.core.windows.net/$root/deb_install.sh' | sudo bash
+
+        
+        -> To Avoid Installation, We Can Also Use Cloud Shell
+
+
+    
+    -> Azure Cloud Shell 
+
+        -> Azure Cloud Shell is an interactive, browser-based, and authenticated terminal 
+        designed to manage and develop Azure resources without requiring local tool installations.
+
+        -> Open Azure Cloud Shell
+
+            -> type az command to confirm 
+
+    
+    -> Commands To Interact With Azure Using CLI 
+
+        -> az group list --output table
+
+        -> az resource list --resource-group <YourResourceGroupName> --output table
+
+        -> az resource list --resource-group az-2605 --output table
+
+
+    -> Next Requirement Is Setting Up Infrastructure Using Azure CLI 
+
+    
