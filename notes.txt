@@ -824,4 +824,66 @@ Class - 9
 
     -> Next Requirement Is Setting Up Infrastructure Using Azure CLI 
 
-    
+
+Class - 10
+===========
+
+    -> Setting Up Infrastructure Using Azure CLI 
+
+        -> az group list --output table
+        -> az group create --name az-2605 --location westus2
+        -> az group list --output table
+        -> az network vnet create --resource-group az-2605 --name hrms --address-prefixes 10.0.0.0/16
+        -> az network vnet subnet create --resource-group az-2605 --vnet-name hrms --name hrms-web-subnet --address-prefixes 10.0.0.0/20
+        -> az network vnet subnet create --resource-group az-2605 --vnet-name hrms --name hrms-app-subnet --address-prefixes 10.0.16.0/21
+        -> az network vnet subnet create --resource-group az-2605 --vnet-name hrms --name hrms-db-subnet --address-prefixes 10.0.24.0/22
+        -> az network public-ip create --resource-group az-2605 --name hrms-web-pip --sku Standard --allocation-method Static
+        -> az network public-ip create --resource-group az-2605 --name hrms-app-pip --sku Standard --allocation-method Static
+        -> az network nsg create --resource-group az-2605 --name hrms-web-nsg 
+        -> az network nsg rule create --resource-group az-2605 --nsg-name hrms-web-nsg --name Allow-SSH --priority 100 --direction Inbound --access Allow --protocol Tcp --destination-port-ranges 22
+        -> az network nsg rule create --resource-group az-2605 --nsg-name hrms-web-nsg --name Allow-HTTP --priority 110 --direction Inbound --access Allow --protocol Tcp --destination-port-ranges 80
+        -> az network nsg rule create --resource-group az-2605 --nsg-name hrms-web-nsg --name Allow-HTTPS --priority 120 --direction Inbound --access Allow --protocol Tcp --destination-port-ranges 443
+        -> az network nsg create --resource-group az-2605 --name hrms-app-nsg 
+        -> az network nsg rule create --resource-group az-2605 --nsg-name hrms-app-nsg --name Allow-SSH --priority 100 --direction Inbound --access Allow --protocol Tcp --destination-port-ranges 22
+        -> az network nsg rule create --resource-group az-2605 --nsg-name hrms-app-nsg --name Allow-HTTP --priority 110 --direction Inbound --access Allow --protocol Tcp --destination-port-ranges 8080
+        -> az network nsg create --resource-group az-2605 --name hrms-db-nsg 
+        -> az network nsg rule create --resource-group az-2605 --nsg-name hrms-db-nsg --name Allow-SSH --priority 100 --direction Inbound --access Allow --protocol Tcp --destination-port-ranges 22
+        -> az network nsg rule create --resource-group az-2605 --nsg-name hrms-db-nsg --name Allow-POSTGRES --priority 110 --direction Inbound --access Allow --protocol Tcp --destination-port-ranges 5432
+        -> az network nic create --resource-group az-2605 --name hrms-web-nic --vnet-name hrms --subnet hrms-web-subnet
+        -> az network nic ip-config update --resource-group az-2605 --nic-name hrms-web-nic --name ipconfig1 --public-ip-address hrms-web-pip
+        -> az network nic update --resource-group az-2605 --name hrms-web-nic --network-security-group hrms-web-nsg
+        -> az network nic create --resource-group az-2605 --name hrms-app-nic --vnet-name hrms --subnet hrms-app-subnet
+        -> az network nic ip-config update --resource-group az-2605 --nic-name hrms-app-nic --name ipconfig1 --public-ip-address hrms-app-pip
+        -> az network nic update --resource-group az-2605 --name hrms-app-nic --network-security-group hrms-app-nsg
+        -> az network nic create --resource-group az-2605 --name hrms-db-nic --vnet-name hrms --subnet hrms-db-subnet
+        -> az network nic update --resource-group az-2605 --name hrms-db-nic --network-security-group hrms-db-nsg
+
+    -> NOTE: First Time As You Are Learning Took 1 Hour To Complete For HRMS 
+
+        -> "Now" We Need To Create LMS VNET Using Command Line Interface (CLI) (Intermediate)
+
+            -> Second Time -  10 Mins To Complete 
+
+                -> az network vnet create --resource-group az-2605 --name lms --address-prefixes 10.0.0.0/16
+                -> az network vnet subnet create --resource-group az-2605 --vnet-name lms --name lms-web-subnet --address-prefixes 10.0.0.0/20
+                -> az network vnet subnet create --resource-group az-2605 --vnet-name lms --name lms-app-subnet --address-prefixes 10.0.16.0/21
+                -> az network vnet subnet create --resource-group az-2605 --vnet-name lms --name lms-db-subnet --address-prefixes 10.0.24.0/22
+                -> az network public-ip create --resource-group az-2605 --name lms-web-pip --sku Standard --allocation-method Static
+                -> az network public-ip create --resource-group az-2605 --name lms-app-pip --sku Standard --allocation-method Static
+                -> az network nsg create --resource-group az-2605 --name lms-web-nsg 
+                -> az network nsg rule create --resource-group az-2605 --nsg-name lms-web-nsg --name Allow-SSH --priority 100 --direction Inbound --access Allow --protocol Tcp --destination-port-ranges 22
+                -> az network nsg rule create --resource-group az-2605 --nsg-name lms-web-nsg --name Allow-HTTP --priority 110 --direction Inbound --access Allow --protocol Tcp --destination-port-ranges 8090
+                -> az network nsg create --resource-group az-2605 --name lms-app-nsg 
+                -> az network nsg rule create --resource-group az-2605 --nsg-name lms-app-nsg --name Allow-SSH --priority 100 --direction Inbound --access Allow --protocol Tcp --destination-port-ranges 50222
+                -> az network nsg rule create --resource-group az-2605 --nsg-name lms-app-nsg --name Allow-HTTP --priority 110 --direction Inbound --access Allow --protocol Tcp --destination-port-ranges 9090
+                -> az network nsg create --resource-group az-2605 --name lms-db-nsg 
+                -> az network nsg rule create --resource-group az-2605 --nsg-name lms-db-nsg --name Allow-SSH --priority 100 --direction Inbound --access Allow --protocol Tcp --destination-port-ranges 22
+                -> az network nsg rule create --resource-group az-2605 --nsg-name lms-db-nsg --name Allow-MySQL --priority 110 --direction Inbound --access Allow --protocol Tcp --destination-port-ranges 3306
+                -> az network nic create --resource-group az-2605 --name lms-web-nic --vnet-name lms --subnet lms-web-subnet
+                -> az network nic ip-config update --resource-group az-2605 --nic-name lms-web-nic --name ipconfig1 --public-ip-address lms-web-pip
+                -> az network nic update --resource-group az-2605 --name lms-web-nic --network-security-group lms-web-nsg
+                -> az network nic create --resource-group az-2605 --name lms-app-nic --vnet-name lms --subnet lms-app-subnet
+                -> az network nic ip-config update --resource-group az-2605 --nic-name lms-app-nic --name ipconfig1 --public-ip-address lms-app-pip
+                -> az network nic update --resource-group az-2605 --name lms-app-nic --network-security-group lms-app-nsg
+                -> az network nic create --resource-group az-2605 --name lms-db-nic --vnet-name lms --subnet lms-db-subnet
+                -> az network nic update --resource-group az-2605 --name lms-db-nic --network-security-group lms-db-nsg
