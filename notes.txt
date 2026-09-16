@@ -887,3 +887,67 @@ Class - 10
                 -> az network nic update --resource-group az-2605 --name lms-app-nic --network-security-group lms-app-nsg
                 -> az network nic create --resource-group az-2605 --name lms-db-nic --vnet-name lms --subnet lms-db-subnet
                 -> az network nic update --resource-group az-2605 --name lms-db-nic --network-security-group lms-db-nsg
+
+
+Class - 11
+===========
+
+    -> NOTE: Let's See How The Infrastructure Can Be Setup Using Code 
+
+        -> Infrastructure As Code - IaC 
+
+    -> Infrastructure As Code - IaC (Pro/Expert)
+
+        -> Infrastructure as code is the process of managing and provisioning computer 
+        data center resources through machine-readable definition files(CODE/SCRIPT), 
+        rather than physical hardware configuration(GUI) or 
+        interactive configuration tools(Azure CLI).
+
+    
+    -> GUI For Beginners 
+
+        -> 1st Time 1 Hours 
+
+        -> 2nd Time 1 Hours 
+
+        -> 3rd Time 1 Hours 
+
+    -> CLI For Intermediate 
+
+        -> 1st Time 1 Hours 
+
+        -> 2nd Time 15 Mins
+
+        -> 3rd Time 15 Mins
+
+    
+    -> CODE For Professionals 
+
+        -> 1st Time 10 Mins 
+
+        -> 2nd Time 2 Mins
+
+        -> 3rd Time 2 Mins 
+
+
+    -> IaC Concept  
+
+        -> Like Developers Write Application Code To Build Applications 
+
+            -> Technologies - Java, Python etc 
+
+        -> As DevOps Engineers/Cloud Engineers, We Will Be Writing 
+        Infrastructure Code To Build Infrastructure 
+
+            -> Tools / Services - Azure ARM Templates, AWS Cloudformation Templates etc 
+
+    
+    -> Azure ARM Templates  
+
+        -> An Azure Resource Manager (ARM) template is a JavaScript Object Notation (JSON) 
+        file that defines the infrastructure and configuration for your Azure project 
+        using a declarative syntax. It allows you to provision, manage, and deploy 
+        all the necessary resources for your solution in a single, coordinated operation, 
+        ensuring consistency and repeatability across different environments. 
+
+        -> https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview
