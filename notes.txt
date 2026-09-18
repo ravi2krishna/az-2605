@@ -951,3 +951,84 @@ Class - 11
         ensuring consistency and repeatability across different environments. 
 
         -> https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview
+
+
+Class - 12
+===========
+
+    -> Azure Virtual Machines (VM's)
+
+        -> An Azure Virtual Machine (VM) is a scalable, on-demand computing resource 
+        in the Microsoft Azure cloud that emulates a physical computer, 
+        giving you control over the OS and applications without managing hardware.
+
+
+    -> Azure Virtual Machines - VM's (Components)
+
+        Desktop / Laptop                                    Azure Virtual Machine 
+
+        -> Hardware                                         -> VM Sizes [ CPU + RAM ]
+            -> Dell 3, 5 series etc                             -> General / Compute / etc (b1s, b2s etc)
+                                                                
+
+        -> Hard Drive [200 GB / 500 GB etc]                 -> Azure Disk [200 GB / 500 GB etc]
+
+        -> Install Operating System                         -> Azure Images i.e Choosing Operating System
+            -> We can use Win, Linux etc                        -> We can use Win, Linux etc                        
+
+        -> Network                                          -> Azure Virtual Network  
+            -> We use routers, switches, firewalls etc           -> We use routers, switches, firewalls etc
+ 
+        -> Login / Authentication                           -> Login / Authentication 
+            -> Username & Password                               -> Username & Key / Username & Password  
+
+        -> Now start working according to Req                -> Now start working according to Req   
+            -> Using Applications                              -> Building Applications
+                -> Browser, Music Players etc                       -> Using Applications Web Sever, DB Server etc 
+
+
+    
+    -> Setup Azure VM & Deploy Simple Web Application 
+
+    
+    -> Web Server 
+
+        -> A web server is computer software that accepts requests via HTTP 
+        to distribute web content.
+
+        -> We Will Use Nginx Web Server 
+
+        -> sudo ss -ntpl 
+
+        -> No Port 80 i.e No Web Server Present 
+
+        -> Install Nginx Web Server 
+
+            -> sudo apt update -y 
+            -> sudo apt install nginx -y 
+            -> sudo ss -ntpl
+
+        -> Now Port 80 Indicates Web Server Installed 
+
+        -> Verify By Browsing IP Address  
+
+        -> Application Code - https://github.com/ravi2krishna/ecomm.git 
+
+        -> Every Web Server has Document Root i.e location where code should be placed 
+
+            -> /var/www/html 
+            -> ls /var/www/html
+
+            -> sudo git clone https://github.com/ravi2krishna/ecomm.git /var/www/html 
+            -> sudo rm -r /var/www/html/* 
+            -> ls /var/www/html
+            -> sudo git clone https://github.com/ravi2krishna/ecomm.git /var/www/html 
+
+    
+    -> To Take The Backup Process For Above Application,  We Can Create Custom Images 
+
+        -> To Create Custom Image 
+
+            -> Create Image Gallery (Azure Compute Galleries)
+
+            
