@@ -1032,3 +1032,37 @@ Class - 12
             -> Create Image Gallery (Azure Compute Galleries)
 
             
+
+Class - 13
+===========
+
+    -> Azure Disks 
+
+        -> While Creating VM, by default Primary Disk i.e OS Disk will be applied
+
+            -> Internal Hard Disk 
+
+        -> Additionally you can add Secondary Disks i.e Data Disk 
+
+            -> External Hard Disk 
+
+        -> NOTE: Availability Zones and VM Zones are Locked Each Other 
+
+        -> Typical operations on Disks
+
+            -> Create Disk 
+
+            -> Attach Disk 
+
+            -> Detach Disk 
+
+            -> Delete Disk 
+            
+
+        -> Disk Rules 
+
+            -> You Cannot Change Zone Of The Disk 
+
+            -> You Cannot Decrease The Size Of Disk, Only increasing (Scale Up) Possible 
+
+    
