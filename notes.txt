@@ -1065,4 +1065,45 @@ Class - 13
 
             -> You Cannot Decrease The Size Of Disk, Only increasing (Scale Up) Possible 
 
+
+Class - 14
+===========
+
+    -> Azure Storage Center / Blob Storage 
+
+        -> Azure Blob Storage provides scalable, cost-efficient 
+        object storage in the cloud. 
+
+        -> Blob Storage supports internet based access directly, 
+        no need of any computer resource like virtual machines.
+
+        -> Price is cheaper Compared to Azure Disks 
+
+            -> 500 GB Of Azure Disks Storage - $22 
+
+            -> 500 GB Of Azure Blob Storage - $12 
+
+        -> When you have vast amount of static assets, go for Blob Storage
+        (images, videos, documents pdf, doc files etc)
+
+        -> https://www.baeldung.com/wp-content/uploads/sites/4/2023/03/blob_storage_architecture-2.png
+
+        -> In Blob We Have Containers & Blobs 
+
     
+    -> Azure File Shares
+
+        -> An Azure File Share provides fully managed, enterprise-grade cloud 
+        file shares accessible via industry-standard protocols (SMB/NFS) 
+        from Windows, Linux.
+
+    -> Manage All Storages Next i.e 
+
+        -> Manged Disks 
+
+        -> Blob Storage
+
+        -> File Shares 
+
+
+
