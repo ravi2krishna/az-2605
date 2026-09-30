@@ -1107,3 +1107,59 @@ Class - 14
 
 
 
+Class - 15
+===========
+
+    -> Azure File Shares 
+
+        -> Connecting Multiple Servers With Azure File Shares
+
+    
+    -> Static Data 
+
+        -> Static Data Means Fixed Data For Every User 
+
+        -> google.com - Data Is Same For Everyone 
+
+    -> Dynamic Data 
+
+        -> Dynamic Data Means Variable Data For Every User 
+        i.e Data Changes For Each User
+
+        -> gmail.com - Every User Had Their Own Inbox 
+
+    -> NOTE: Dynamic Data Comes From Databases
+
+    -> Database is an organized collection of data or a type of data store 
+    based on the use of a database management system (DBMS).
+
+    -> Database is a collection Of "Tables"
+
+    -> Tables contain data in Rows and Columns Format, Just Like Excel Sheet
+
+        -> https://www.plus2net.com/sql_tutorial/images/table.jpg
+
+    -> SQL - (Structured Query Language) is the standard programming language 
+    used to manage, store, process, and query data in relational databases.
+
+    -> Using SQL We Perform CRUD operations 
+
+        -> C - Create Record 
+
+        -> R - Read Record 
+
+        -> U - Update Record
+
+        -> D - Delete Record 
+
+    
+    -> NOTE: Like We Have VM's Which Provide General Purpose Computing 
+    To Host Any Type Of Application 
+
+    -> NOTE: Likewise We Have SQL Service Which Provides Database Computing 
+    To Host Databases On Cloud Without Much Administrative Efforts. 
+
+    
+
+
+
